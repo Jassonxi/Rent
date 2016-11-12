@@ -1,0 +1,58 @@
+body{
+    padding-top: 30px;
+
+}
+
+.navbar{
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+.onepage-bg{
+    background-color: #000000;
+
+}
+
+/*img { border:none; }*/
+/*.product_list { float:left;margin: 2px}*/
+/*.product_list img { width:200px;}*/
+
+* { box-sizing: border-box; }
+
+body { font-family: sans-serif; }
+
+/* ---- grid ---- */
+
+.grid {
+    max-width: 1200px;
+}
+
+/* clearfix */
+.grid:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+/* ---- grid-item ---- */
+
+.grid-item {
+    width: 217px;
+    margin-bottom: 5px;
+}
+
+.grid-item:hover {
+    border: 1px solid white;
+    cursor: pointer;
+}
+.grid-item img {
+    max-width: 217px;
+}
+
+.grid-item--gigante img {
+    width: 500px;
+    height: 360px;
+    background: #F90;
+    z-index: 2; /* abover other items */
+}
+

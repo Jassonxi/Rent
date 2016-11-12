@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Only One</title>
+    <link href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <!--<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">-->
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <style>
+
+    </style>
+</head>
+<body>
+<nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid ">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><strong>Only One</strong></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="#">我的二维码</a></li>
+                <li><a href="#">添加卡信息</a></li>
+                <li><a href="#">已支持商家</a></li>
+                <li><a href="#">定制尊享卡</a></li>
+
+            </ul>
+            <form class="navbar-form navbar-left" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="输入商家名称">
+                </div>
+                <button type="submit" class="btn btn-default">搜索</button>
+            </form>
+            <ul class="nav navbar-nav navbar-right" style="display: none">
+                <li><a href="#">注册</a></li>
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">登入 <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">我的信息</a></li>
+                        <li><a href="#">修改密码</a></li>
+                        <li><a href="#">我的二维码</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#">注销</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+<div class="onepage">
+
+    <div class="onepage-bg">
+        <h1 class="text-center" style="color: #d1e973 ">下面是您的二维码:</h1>
+        <div id="qrcode" style="width: 100% ;" class="text-center"></div>
+
+
+    </div>
+
+
+</div>
+<div class="twopage">
+    <div class="container">
+        <div class="twopage-bg">
+            <h1 class="text-center">已包含优惠卡(商家):</h1>
+            <hr style="color:#000000; size: 10">
+            <div class="container haveCards toDelete">
+
+                <div class="row" id="row1">
+                    <span>暂无优惠卡信息。</span>
+                    <!--<div class=" twopage-courses col-md-3 col-sm-3 col-xs-3">-->
+                    <!--<a href="#"><img src="images/wechat.jpg" style="width: 100%">-->
+
+                    <!--</a>-->
+                    <!--</div>-->
+                    <!--<div class=" twopage-courses col-md-3 col-sm-3 col-xs-3">-->
+                    <!--<a href="#"><img src="images/ios.jpg" style="width: 100%">-->
+
+                    <!--</a>-->
+                    <!--</div>-->
+                    <!--<div class=" twopage-courses col-md-3 col-sm-3 col-xs-3">-->
+                    <!--<a href="#"><img src="images/android.jpg" style="width: 100%">-->
+
+                    <!--</a>-->
+                    <!--</div>-->
+                    <!--<div class=" twopage-courses col-md-3 col-sm-3 col-xs-3">-->
+                    <!--<a href="#"><img src="images/android.jpg" style="width: 100%">-->
+
+                    <!--</a>-->
+                    <!--</div>-->
+
+
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<div class="threepage">
+    <div class="container">
+        <div class="threepage-bg">
+            <h1 class="text-center">未包含优惠卡(商家),可选取添加:</h1>
+            <hr style="color:#000000; size: 10">
+            <div class="container haveCards toAdd">
+                暂无任何优惠卡(商家)信息
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="js/jquery-3.1.0.min.js"></script>
+<script src="js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://cdn.staticfile.org/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+<script src="js/masonry.pkgd.min.js"></script>
+<script src="js/imagesloaded.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+    var shops = new Array();
+    var id;
+    $(document).ready(function () {
+        var ass = $.cookie("login");
+     // alert(ass.length);
+       // alert(ass);
+
+
+
+        var cookie = document.cookie;
+        if( !ass || cookie.length<24){
+            location.href = 'index.html';
+            return ;
+        }
+        var i = $.queryString("id");
+        $.ajax({
+            type: "GET",
+            url: "http://localhost:8888/load",
+            data: {id: ass},
+            success: function (data) {
+                data = JSON.parse(data);
+                var html = "<ul class='nav navbar-nav navbar-right' >" +
+                        "<li><a>Welcome,尊敬的 </a></li>" +
+                        "<li class='dropdown'>" +
+                        " <a href='#' class='dropdown-toggle' data-toggle='dropdown'>" + data.realName + "<span class='caret'></span></a>" +
+                        "<ul class='dropdown-menu' role='menu'>" +
+                        " <li><a href='#'>我的信息</a></li>" +
+                        " <li><a href='#'>修改密码</a></li>" +
+                        "<li><a href='#'>我的二维码</a></li>" +
+                        "<li class='divider'></li>" +
+                        "<li><a href='#'>注销</a></li>" +
+                        " </ul></li> </ul>";
+                $("#bs-example-navbar-collapse-1").append(html);
+                makeQR(data._id);
+                shops = data.cards.toString().split(",");
+                showAddedSops(shops);
+            },
+            error: function () {
+                alert("wrong");
+
+            }
+        });
+    });
+    function makeQR(id) {
+        jQuery("#qrcode").qrcode({
+            width: 300,
+            height: 300,
+            text: id
+        })
+    }
+    function showAddedSops(shop) {
+        if (shop.length > 0 && shop != "") {
+            $("#row1 span").hide();
+
+            for (var i = 0; i < shop.length; i++) {
+                var html = " <div class=' twopage-courses col-md-3 col-sm-3 col-xs-3 newshops'  onclick='toDelete(this)'   > " +
+                        "<a href='javascript:;'><img onchange='toShow(this)' src='images/logos/" + shop[i].toLowerCase() + ".jpg" + "' style='width: 100%'> </a></div>";
+                $("#row1").append(html);
+                $("#row1").trigger("create");
+            }
+        } else
+            return;
+    }
+    $.queryString = function (id) {
+        var e = {};
+        try {
+            var qs = document.URL.split('?')[1].split('&');
+        }
+        catch (ex) {
+            return null;
+        }
+        if (!isNaN(id)) return e[qs[id].split('=')[1]];
+        for (var i = 0; i < qs.length; i++) {
+            e[qs[i].split('=')[0].toLowerCase()] = qs[i].split('=')[1];
+        }
+        if (id) {
+            return e[id.toLowerCase()];
+        }
+        return e;
+    };
+        function toDelete(o){
+           $(o).hide(300);
+           // $(".newshops").animate({opactiy:1});
+        }
+
+</script>
+</body>
+</html>

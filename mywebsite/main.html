@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" id="viewport"
+          name="viewport">
+    <title>Only One</title>
+    <link href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="css/css_remodal/remodal.css" rel="stylesheet" type="text/css">
+    <link href="css/css_remodal/remodal-default-theme.css" rel="stylesheet" type="text/css">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+    <style>
+
+    </style>
+</head>
+<body style="overflow:scroll;overflow-y: auto">
+<nav class="navbar navbar-default navbar-inverse navbar-fixed-top" role="navigation">
+    <div class="container-fluid ">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                    data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#"><strong>Only One</strong></a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="#">我的二维码</a></li>
+                <li><a href="#modal2">添加卡信息</a></li>
+                <li><a href="#">已支持商家</a></li>
+                <li><a href="#">定制尊享卡</a></li>
+
+            </ul>
+            <form class="navbar-form navbar-left" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control nav-search" placeholder="输入商家名称">
+                    <button type="submit" class="btn btn-default nav-search-btn">搜索</button>
+                </div>
+                <div class="form-group">
+                </div>
+            </form>
+
+        </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+</nav>
+<div class="onepage">
+
+    <div class="onepage-bg">
+        <h1 class="text-center" style="color: #d1e973 ">下面是您的二维码:</h1>
+        <div id="qrcode" style="width: 100% ;" class="text-center"></div>
+    </div>
+</div>
+<div class="twopage">
+    <div class="container">
+        <div class="twopage-bg">
+            <h1 class="text-center">已包含优惠卡(商家):</h1>
+            <hr style="color:#000000; size: 10em">
+            <div class="container haveCards toDelete">
+
+                <div class="row" id="row1">
+                    <span>暂无优惠卡信息。</span>
+                    <div class="grid">
+                        <div class="grid-item"></div>
+                        <!--<div class="grid-item"><img src="images/logos/jackjones.jpg"></div>-->
+                        <!--<div class="grid-item"><img src="images/logos/adidas.jpg"></div>-->
+                        <!--<div class="grid-item"><img src="images/logos/jackjones.jpg"></div>-->
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+<!--<div class="threepage">-->
+<!--<div class="container">-->
+<!--<div class="threepage-bg">-->
+<!--<h1 class="text-center">未包含优惠卡(商家),可选取添加:</h1>-->
+<!--<hr style="color:#000000; size: 10em">-->
+<!--<div class="container haveCards toAdd">-->
+<!--暂无任何优惠卡(商家)信息-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+
+<div class="remodal" data-remodal-id="modal" role="dialog" aria-labelledby="modal1Title" aria-describedby="modal1Desc">
+    <button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
+    <div>
+        <h2 id="modal1Title"></h2>
+        <p id="modal1Desc">
+        <div class="remodal-bg-img">
+            <img class="remodal-img" src="images/bg.jpg">
+        </div>
+        <div style="margin: 0 auto;" class="remodal-content">
+            <!--<p>-->
+            
+        </div>
+        <br>
+        <button data-remodal-action="confirm" class="remodal-cancel">删除</button>
+        <button data-remodal-action="cancel" class="remodal-confirm">取消</button>
+    </div>
+
+</div>
+    <div class="remodal" data-remodal-id="modal2" role="dialog" aria-labelledby="modal1Title"
+         aria-describedby="modal1Desc">
+        <button data-remodal-action="close" class="remodal-close" aria-label="Close"></button>
+        <div>
+            <h2 id="modal1Title2">Remodal</h2>
+            <p id="modal1Desc2">
+            <div class="remodal-bg-img">
+                <img class="remodal-img" alt="暂时无法显示图片" src="images/bg.jpg">
+            </div>
+            <div style="margin: 0 auto;">
+                <p>
+                    <span style="width: 100px; display: inline-block; vertical-align: top;text-align: right">来源：</span>
+                    <input type="text" value="卡名">
+                </p>
+                <p>
+                    <span style="width: 100px; display: inline-block; vertical-align: top;text-align: right">类型：</span>
+                    <span style="width: 150px;display: inline-block">普通积分卡</span>
+                </p>
+                <p>
+                    <span style="width: 100px; display: inline-block; vertical-align: top;text-align: right">积分：</span>
+                    <span style="width: 150px;display: inline-block">300</span>
+                </p>
+                <p>
+                    <span style="width: 100px; display: inline-block; vertical-align: top;text-align: right">卡内余额：</span>
+                    <span style="width: 150px;display: inline-block">300</span>
+                </p>
+                <p>
+                    <span style="width: 100px; display: inline-block; vertical-align: top;text-align: right">可享折扣：</span>
+                    <span style="width: 150px;display: inline-block">75折</span>
+                </p>
+                <p>
+                    <span style="width: 100px; display: inline-block; vertical-align: top;text-align: right">办理时间：</span>
+                    <span style="width: 150px;display: inline-block">2016-10-21 17:49</span>
+                </p>
+                <p>
+                    <span style="width: 100px; display: inline-block; vertical-align: top;text-align: right">上次使用时间：</span>
+                    <span style="width: 150px;display: inline-block">2016-10-21 17:49</span>
+                </p>
+            </div>
+
+            </p>
+        </div>
+        <br>
+        <button data-remodal-action="confirm" class="remodal-cancel">删除</button>
+        <button data-remodal-action="cancel" class="remodal-confirm">取消</button>
+    </div>
+
+</body>
+<script src="js/jquery-3.1.0.min.js"></script>
+<script src="js/jquery.cookie.js"></script>
+<script type="text/javascript" src="http://cdn.staticfile.org/jquery.qrcode/1.0/jquery.qrcode.min.js"></script>
+
+<script src="js/masonry.pkgd.min.js"></script>
+<script src="js/imagesloaded.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/remodal/remodal.min.js"></script>
+<script>
+    var shops = new Array();
+    var id;
+    var localdate;
+    var state;
+    var grimData;
+    var toDelete_cardName;
+    var toDelete_cardNumber;
+    var ip_address = "localhost";
+    // external js: masonry.pkgd.js
+    var $grid = $('.grid').masonry({
+        columnWidth: 115,
+        itemSelector: '.grid-item'
+    });
+    $grid.on('click', '.grid-item', function (event) {
+        $(".grid-item a").attr("href", "#modal");
+        state = event;
+
+
+        console.log(state);
+        console.log(grimData.cards[0]);
+        console.log($(state.currentTarget).attr("id"));
+        for (var i = 0; i < grimData.cards.length; i++) {
+            var s = 'id'+grimData.cards[i].cardNumber ;
+            // alert($(state.currentTarget).attr("id"));
+            if ((s)== $(state.currentTarget).attr("id")) {
+                toDelete_cardNumber = grimData.cards[i].cardNumber;
+                toDelete_cardName = grimData.cards[i].cardName;
+                localdate = new Date(grimData.cards[i].cardCreate);
+                $("#modal1Title").html(grimData.cards[i].cardName.toUpperCase());
+                $(".remodal-img").attr("src", "images/logos/" + grimData.cards[i].cardName.toLowerCase() + ".jpg");
+                $(".remodal-content").html("");
+                // alert(grimData.cards[i].cardNumber);
+                var html = ' <p> <span style="width: 100px; display: inline-block; vertical-align: top;text-align: right">卡号：</span>' +
+                        '<span style="width: 150px;display: inline-block;">' + grimData.cards[i].cardNumber + '</span></p>' +
+                        ' <p> <span style="width: 100px; display: inline-block; vertical-align: top;text-align: right">来源：</span>' +
+                        '<span style="width: 150px;display: inline-block;">' + grimData.cards[i].cardLocation + '</span></p>' +
+                        '<p><span style="width: 100px; display: inline-block; vertical-align: top;text-align: right">类型：</span>' +
+                        '<span style="width: 150px;display: inline-block">' + grimData.cards[i].cardLevel + '</span></p>' +
+                        '<p><span style="width: 100px; display: inline-block; vertical-align: top;text-align: right">积分：</span>' +
+                        '<span style="width: 150px;display: inline-block">' + grimData.cards[i].cardScore + '</span> </p>' +
+                        '<p><span style="width: 100px; display: inline-block; vertical-align: top;text-align: right">卡内余额：</span>' +
+                        '<span style="width: 150px;display: inline-block">' + grimData.cards[i].cardMoney + '</span> </p>' +
+                        '<p> <span style="width: 100px; display: inline-block; vertical-align: top;text-align: right">可享折扣：</span>' +
+                        '<span style="width: 150px;display: inline-block">' + grimData.cards[i].cardDiscount + '</span> </p>' +
+                        '<p> <span style="width: 100px; display: inline-block; vertical-align: top;text-align: right">办理时间：</span>' +
+                        '<span style="width: 150px;display: inline-block">' + localdate.toLocaleString() + '</span> </p>' +
+                        '<p> <span style="width: 100px; display: inline-block; vertical-align: top;text-align: right">上次使用时间：</span>' +
+                        '<span style="width: 150px;display: inline-block">' + localdate.toLocaleString() + '</span> </p>'
+                $(".remodal-content").append(html);
+                break;
+            }
+
+        }
+        $(document).on('confirmation', '.remodal', function (e) {
+
+                    console.log(toDelete_cardName+toDelete_cardNumber);
+            $grid.masonry('remove', state.currentTarget).masonry();
+                toDeleteByClick(grimData._id,toDelete_cardName,toDelete_cardNumber);
+                
+
+
+
+        });
+    });
+    function toDeleteByClick(_id,name,number){
+        $.ajax({
+            type:"post",
+            url: "http://" + ip_address + ":8888/delete",
+            data:{id:_id,cardName:name,cardNumber:number},
+            success:function(data){
+                console.log("delete successfully");
+
+            },
+            error:function(err){
+                console.log(err);
+
+            }
+
+
+
+        })
+
+    }
+
+    function toLogout() {
+        location.href = 'index.html';
+        $.cookie("login", null);
+    }
+    function getItemElement() {
+        var elem = document.createElement('div');
+        var wRand = Math.random();
+        var hRand = Math.random();
+        var widthClass = wRand > 0.8 ? 'grid-item--width3' : wRand > 0.6 ? 'grid-item--width2' : '';
+        var heightClass = hRand > 0.85 ? 'grid-item--height4' : hRand > 0.6 ? 'grid-item--height3' : hRand > 0.35 ? 'grid-item--height2' : '';
+        elem.className = 'grid-item ' + widthClass + ' ' + heightClass;
+        return elem;
+    }
+    $(document).ready(function () {
+        var ass = $.cookie("login");
+        if (!ass || ass.length != 24) {
+            location.href = 'index.html';
+            return;
+        }
+        var i = $.queryString("id");
+        $.ajax({
+            type: "GET",
+            url: "http://" + ip_address + ":8888/load",
+            data: {id: ass},
+            success: function (data) {
+                data = JSON.parse(data);
+                var html = "<ul class='nav navbar-nav navbar-right' >" +
+                        "<li><a>Welcome,尊敬的 </a></li>" +
+                        "<li class='dropdown'>" +
+                        " <a href='#' class='dropdown-toggle' data-toggle='dropdown'>" + data.realName + "<span class='caret'></span></a>" +
+                        "<ul class='dropdown-menu' role='menu'>" +
+                        " <li><a href='#'>我的信息</a></li>" +
+                        " <li><a href='#'>修改密码</a></li>" +
+                        "<li><a href='#'>我的二维码</a></li>" +
+                        "<li class='divider'></li>" +
+                        "<li><a href='' onclick='toLogout()'>注销</a></li>" +
+                        " </ul></li> </ul>";
+                $("#bs-example-navbar-collapse-1").append(html);
+                makeQR(data._id);
+                grimData = data;
+               console.log(grimData);
+                showAddedSops(data);
+            },
+            error: function () {
+                alert("wrong");
+            }
+        });
+    });
+    function makeQR(id) {
+        jQuery("#qrcode").qrcode({
+            width: 300,
+            height: 300,
+            text: id
+        })
+    }
+    function showAddedSops(shop) {
+        $("#row1 span").hide();
+        for (var i = 0; i < shop.cards.length; i++) {
+            var $html2 = $('<div class="grid-item" id=id' + shop.cards[i].cardNumber + '><a><img src="images/logos/' + shop.cards[i].cardName.toLowerCase() + '.jpg"></a></div>');
+            //   $html2.imagesLoaded(function () {
+               console.log($html2);
+            $grid.append($html2).masonry('appended', $html2);
+            $grid.imagesLoaded().progress(function () {
+                $grid.masonry('layout');
+            });
+        }
+    }
+    $.queryString = function (id) {
+        var e = {};
+        try {
+            var qs = document.URL.split('?')[1].split('&');
+        }
+        catch (ex) {
+            return null;
+        }
+        if (!isNaN(id)) return e[qs[id].split('=')[1]];
+        for (var i = 0; i < qs.length; i++) {
+            e[qs[i].split('=')[0].toLowerCase()] = qs[i].split('=')[1];
+        }
+        if (id) {
+            return e[id.toLowerCase()];
+        }
+        return e;
+    }
+</script>
+
+</html>

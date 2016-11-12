@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>bootstrap示例</title>
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<style type="text/css">
+		.row div{
+			background-color: grey;
+			height: 300px;
+		}
+	</style>
+</head>
+<body>
+	<script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<!-- <div class="container">
+		<div class="hero-unit"></div>
+		<div class="row">
+			<div class="span2">2</div>
+			<div class="span7">7</div>
+			<div class="span2">3</div>
+		</div>
+		<footer></footer>
+	</div> -->
+
+<!-- 	<h2>华语九天榜</h2>
+<table class="table table-striped table-bordered table-hover">
+	<tr>
+		<th>排名</th>
+		<th>歌曲名</th>
+		<th>歌手名</th>
+	</tr>
+	<tr class="success">
+		<td>1</td>
+		<td>我，一个人</td>
+		<td>傅子博</td>
+	</tr>
+	<tr>
+		<td>2</td>
+		<td>他们</td>
+		<td>张惠妹</td>
+	</tr>
+	<tr class="error">
+		<td>3</td>
+		<td>伤不起</td>
+		<td>郁可唯</td>
+	</tr>
+	<tr>
+		<td>4</td>
+		<td>如果有如果</td>
+		<td>邓福如</td>
+	</tr>
+	<tr class="warning">
+		<td>5</td>
+		<td>狂想曲</td>
+		<td>萧敬腾</td>
+	</tr>
+	<tr>
+		<td>6</td>
+		<td>越来越想爱你</td>
+		<td>张靓颖</td>
+	</tr>
+</table> -->
+
+	<!-- <div class="input-prepend input-append">
+		<input type="button" class="btn" value="Email">
+		<input type="text">
+		<div class="btn-group">
+			<button class="btn">
+				@163.com
+			</button>
+			<button class="btn" data-toggle="dropdown" tabindex="-1">
+				<span class="caret"></span>
+			</button>
+			<ul class="dropdown-menu">
+				<li><a href="#">@126.com</a></li>
+				<li><a href="#">@sohu.com</a></li>
+				<li><a href="#">@qq.com</a></li>
+				<li><a href="#">@263.com</a></li>
+			</ul>
+		</div>
+		<button class="btn">登陆</button>
+	</div> -->
+<!-- <h3>用户登录</h3>
+	<form method="post" action="">
+		<label for="userName">用户名：</label>
+		<input type="text" id="userName" name="">
+		<label for="userPass">密 码：</label>
+		<input type="password" id="userPass" name="">
+		<label for="validate">验证码:</label>
+		<input type="text" id="validate" name="">
+		<label for="keppLogin">
+			<input type="checkbox" id="keepLogin" name="">
+		记住我的登陆信息</label>
+		<button type="submit" class="btn-login">登 陆</button>
+		<a href="#" class="reg">用户注册</a>
+	</form> -->
+<!-- 
+		<form class="form-search">
+			<input type="text" class="search-query" name="">
+		</form>
+ -->
+
+<!-- 
+ 		<form action="" method="post" class="form-horizontal">
+ 			<div class="control-group">
+ 				<div class="control-label">
+ 					<label for="userName">用户名：</label>
+ 				</div>
+ 				<div class="controls">
+ 					<input type="text" id="userName" name="">
+ 				</div>
+ 			</div>
+ 			<div class="control-group">
+ 				<div class="control-label">
+ 					<label for="userPass">密 码：</label>
+ 				</div>
+ 				<div class="controls">
+ 					<input type="password" id="userPass" name="">
+ 				</div>
+ 			</div>
+ 		</form> -->
+
+
+
+ 		<!-- <form class="form-actions" method="">
+ 			<label>用户名：
+ 						<input type="text" id="userName" name="">
+ 			</label>
+ 			<label>密 码:
+ 						<input type="password" id="userPass" name="">
+ 			</label>
+ 			<button type="button" class="btn">取消</button>
+ 			<button type="button" class="btn btn-primary">确定登陆</button>
+ 		</form> -->
+
+ 		<!-- <label>Email
+ 					<input type="email" class="span3" required="required" name="">
+ 		</label> -->
+
+
+<!-- 
+ 		<a href="#" class="btn">超级链接（a）</a>
+ 		<button class="btn">按钮标签（button）</button>
+ 		<input type="button" class="btn" value="按钮标签（input）">
+ 		<input type="button" class="btn" value="按钮标签（input）">
+ 		<button class="btn btn-info">信息</button>
+ 		<button class="btn btn-primary">主要</button>
+ 		<button class="btn btn-success">成功</button>
+ 		<button class="btn btn-warning">警告</button>
+ 		<button class="btn btn-danger">危险</button>
+ 		<button class="btn btn-inverse">反向</button>
+ 		<button class="btn btn-link">链接</button>
+ 		<button class="btn btn-block">微博登录</button> -->
+ 		<!-- <a href="#" class="btn disabled">默认连接</a> -->
+
+
+
+
+ 		<!-- <div class="row-fluid">
+ 			<div class="text-center span3"><img src="../DIV+CSS/SPA/img/7.jpg" class="img-rounded" title="圆角设计">圆角效果</div>
+ 			<div class="text-center span3"><img src="../DIV+CSS/SPA/img/7.jpg" title="正常效果">正常效果</div>
+ 			<div></div>
+ 		</div> -->
+
+
+ 		<i class="icon-search"></i>
+ 		<span class="icon-search"></span>
+</body>
+</html>

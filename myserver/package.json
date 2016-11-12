@@ -1,0 +1,22 @@
+{
+  "name": "myserver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body": "^5.1.0",
+    "body-parser": "^1.15.2",
+    "mongoose": "^4.6.3",
+    "parser": "^0.1.4",
+    "restify": "^4.1.1",
+    "restify-session":"*",
+    "ioredis":"*",
+    "restify-cookies":"*"
+
+  }
+}

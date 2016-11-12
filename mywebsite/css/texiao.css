@@ -1,0 +1,89 @@
+@charset "utf-8";
+/*框架预览 CSS*/
+.mkeBody{ background:#121212;}
+.mkeHeadBox{ padding: 30px 10px; text-overflow: ellipsis; white-space: nowrap; margin: 0; color: #fff; text-align: center; overflow: hidden; border-bottom: 3px solid #666; box-shadow: inset 0 -2px 3px #000000; letter-spacing: 1px; font: 26px/26px "微软雅黑"; }
+.mkeFooterBox{ padding: 25px 10px; text-overflow: ellipsis; margin: 0; color: #fff; font-size: 14px; line-height: 24px; text-align: center; overflow: hidden; border-top: 3px solid #666; box-shadow: inset 0 2px 3px #000000; }
+.mkeContentBox{ background:#fff; padding:0}
+.mkeContentBox:after{height:0; clear:both;}
+.mkeFooterBox p,.mkeFooterBox div{padding:0; margin:0; line-height:26px; font-size:14px;}
+.mkeFooterBox a{color:#fff; white-space:nowrap}
+.mkeButton{background:#F36; display:inline-block; text-decoration:none; width:102px; border-radius:0.3em; transition:all 0.3s ease}
+.mkeButton:hover{ background: #FF1550; }
+.mkeURL{font-size:24px;}
+.mkeFooterBox .mKeBannerAD{ width: 728px; height: 90px; margin: 18px auto 0; }
+.mkeFooterBox .mSmallKeBannerAD{display:none;}
+@media only screen and (max-width:900px){
+    .mkeButton {display:block; margin:8px auto 0;}
+}
+@media only screen and (max-width:767px){
+    .mkeHeadBox{font-size:18px; padding:15px 10px;}
+    .mkeFooterBox p,.mkeFooterBox div{ line-height:24px; font-size:12px;}
+    .mkeURL{font-size:22px;}
+    .mkeFooterBox .mKeBannerAD{display:none;}
+    .mkeFooterBox .mSmallKeBannerAD{width:300px; height:250px; margin:18px auto 0; display:block;}
+}
+/*End*/
+
+/*主要CSS*/
+html { font-family: sans-serif; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100% }
+body { margin: 0;}
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary { display: block }
+audio, canvas, progress, video { display: inline-block; vertical-align: baseline }
+audio:not([controls]) { display: none; height: 0 }
+[hidden], template {
+    display:none
+}
+a { background-color: transparent }
+a:active, a:hover { outline: 0 }
+abbr[title] { border-bottom: 1px dotted }
+b, strong { font-weight: bold }
+dfn { font-style: italic }
+h1 { font-size: 2em; margin: .67em 0 }
+mark { background: #ff0; color: #000 }
+small { font-size: 80% }
+sub, sup { font-size: 75%; line-height: 0; position: relative; vertical-align: baseline }
+sup { top: -.5em }
+sub { bottom: -.25em }
+img { border: 0 }
+svg:not(:root) { overflow: hidden }
+figure { margin: 1em 40px }
+hr { -moz-box-sizing: content-box; box-sizing: content-box; height: 0 }
+pre { overflow: auto }
+code, kbd, pre, samp { font-family: monospace, monospace; font-size: 1em }
+
+.container { width: 800px; max-width: 100%; margin: 0 auto; *zoom:1;
+    -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box }
+.container:before, .container:after { content: " "; display: table }
+.container:after { clear: both }
+.site-content { background: url(data:image/png;base64,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) repeat #eaeaea; *background:url(mhtml:http://www.solagirl.net/wp-content/cache/autoptimize//autoptimize_108aa74792b5643a62ca0244d5dc2b4b.txt!1) repeat #eaeaea;
+    _background: url(//www.solagirl.net/wp-content/themes/simple/assets/css/../images/body-bg.png) repeat #eaeaea; height:475px; padding-top:55px; text-shadow: 1px 1px rgba(255,255,255,0.4) }
+.site-content input[type="text"], .site-content input[type="email"], .site-content input[type="url"], .site-content input[type="search"], .site-content select, .site-content textarea { background-color: #fff; background-color: rgba(0,0,0,0.03) }
+.dark-text .site-content { text-shadow: 1px 1px rgba(0,0,0,0.4) }
+.dark-text .site-content input[type="text"], .dark-text .site-content input[type="email"], .dark-text .site-content input[type="url"], .dark-text .site-content input[type="search"], .dark-text .site-content select, .dark-text .site-content textarea { background-color: #fff; background-color: rgba(0,0,0,0.2) }
+.content-area { line-height: 1.9; font-family: Helvetica, 'Microsoft Yahei', '微软雅黑', sans-serif }
+.content-area h1, .content-area h2, .content-area h3, .content-area h4, .content-area h5, .content-area h6 { color: #d35b54; margin: 2.6em 0 .4em 0 }
+.content-area ul { padding-left: 2px }
+.content-area ul ul, .content-area ul ol { padding-left: 2em; margin-top: .8em }
+.content-area ul li { position: relative; padding-left: .8em }
+.content-area ul li:before { display: inline-block; font: normal normal normal 14px/1 FontAwesome; font-size: inherit; text-rendering: auto; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; transform: translate(0, 0); content: "\f105"; position: absolute; top: .2em; left: 0 }
+.content-area ol { padding-left: 21px }
+.content-area ol ol, .content-area ol ul { padding-left: 2em; margin-top: .8em }
+.content-area li { margin-bottom: .8em; line-height: 1.5 }
+.content-area .entry-meta { zoom: 1; filter: alpha(opacity=50); -webkit-opacity: .5; -moz-opacity: .5; opacity: .5; margin-top: 24px; font-size: 14px; font-size:.875rem
+}
+.content-area .entry-meta:hover { zoom: 1; filter: alpha(opacity=100); -webkit-opacity: 1; -moz-opacity: 1; opacity: 1 }
+.content-area .entry-meta a { color: inherit }
+.content-area .entry-meta span { margin-right: 1em; color: inherit }
+.content-area .entry-meta span:before { display: inline-block; font: normal normal normal 14px/1 FontAwesome; font-size: inherit; text-rendering: auto; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; transform: translate(0, 0); padding-right: .2em; -webkit-transition: color .3s; -moz-transition: color .3s; -o-transition: color .3s; transition: color .3s }
+.content-area .entry-meta span:hover { color: #d35b54 }
+.content-area .entry-meta span.categories:before { content: "\f187" }
+.content-area .entry-meta span.tags:before { content: "\f02c" }
+.content-area .entry-meta span.date:before { content: "\f073" }
+.content-area .entry-meta span.leave-reply:before { content: "\f075" }
+.content-area .entry-meta span.leave-reply, .content-area .entry-meta span.date { word-break: normal }
+.content-area .entry-attachment { margin-bottom: 24px }
+.entry-content .yarpp-related { margin: 2em 0 !important; font-size: 0 }
+.entry-content .yarpp-related li { -webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box; position: relative; list-style: none; display: inline-block; width: 25%; padding-bottom: 25%; background-color: #06a4bc; background-color: rgba(6,164,188,0.63); border: 1px solid rgba(0,0,0,0.1); -webkit-transition: -webkit-transform 600ms cubic-bezier(0.68, -.55, .265, 1.55); -moz-transition: -moz-transform 600ms cubic-bezier(0.68, -.55, .265, 1.55); -o-transition: -o-transform 600ms cubic-bezier(0.68, -.55, .265, 1.55); transition: -webkit-transform 600ms cubic-bezier(0.68, -.55, .265, 1.55), -moz-transform 600ms cubic-bezier(0.68, -.55, .265, 1.55), -o-transform 600ms cubic-bezier(0.68, -.55, .265, 1.55), transform 600ms cubic-bezier(0.68, -.55, .265, 1.55); z-index:0 }
+.entry-content .yarpp-related li a { position: absolute; top: 50%; -webkit-transform: translateY(-50%); -moz-transform: translateY(-50%); -o-transform: translateY(-50%); -ms-transform: translateY(-50%); transform: translateY(-50%); font-weight: normal !important; font-size: 16px; text-shadow: none; color: #fff; padding: 0 1em; max-height: 100px; overflow: hidden; text-decoration:none; font-family: "STXihei", "华文细黑", helvetica, 'Microsoft Yahei', '微软雅黑', sans-serif; }
+.entry-content .yarpp-related li:hover { -webkit-transform: scale(1.3, 1.3); -moz-transform: scale(1.3, 1.3); -o-transform: scale(1.3, 1.3); -ms-transform: scale(1.3, 1.3); transform: scale(1.3, 1.3); background-color: #06a4bc; border: 0; position: relative; z-index: 1 }
+.entry-content .yarpp-related h3 { font-size: 20px; font-size: 1.25rem; margin-bottom: 20px }
